@@ -1,0 +1,290 @@
+body {
+    background-image: url(https://cutewallpaper.org/22/naruto-minimal-wallpapers/526523235.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px 30%;
+    background-attachment: fixed;
+    background-color: #ed8526;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    
+  
+}
+
+ header{
+    background-color: rgb(18, 85, 194);
+    margin: 0;
+    padding-bottom: 20px;  
+
+ }
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    /* font-family: 'Ultra',Arial, Helvetica, sans-serif; */
+    font-family: 'Source Serif Pro', serif,Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+
+}
+a:visited{/* Funciona para evitar que el link aparesca morado */
+    text-decoration: none;
+    color: black; 
+
+}
+ul{
+    list-style: none;
+}
+/*CLASS*/
+.titular{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100px;
+    height: 80px;
+}
+
+.menu {
+    
+    background-color:rgb(18, 85, 194) ;
+    
+    position: sticky;
+    top: -2px;
+    
+    
+}
+
+.menu__barra{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+}
+.menu__barra__item{
+    margin-top: 0;
+    
+    margin-left: 0;
+    width: 100%;
+    max-width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    
+    background-color: rgb(189, 189, 189);
+    color: black;
+    font-size: 20px;
+    
+    border: 5px;
+    border-radius: 10px;
+    border-style:solid;
+    border-color: rgb(125, 125, 125);
+
+}
+
+.trailer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+/* .trailer__titulo{
+    width: 100%;
+    height: 50px;
+    
+
+
+} */
+.trailer__titulo__texto{
+    margin-left: 15%;
+
+    display: flex;
+    justify-content: center;
+    max-width: 200px;;
+    max-height: 200px;
+    background-color: rgb(18, 85, 194);
+    border: 2px;
+    border-style: solid;
+    border-radius: 45px;
+    border-color: rgb(206, 206, 207);
+    color: white;
+    font-family: 'Source Serif Pro', serif,Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.trailer__galeri{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+.trailer__galeri__video{
+    padding: 15px;
+    
+
+}
+
+
+.recomendacion{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.recomendacion__animepre{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;  
+    padding: 30px;  
+
+    align-content: center;
+    border: 2px;
+    border-style: solid;
+    
+    border-color:rgb(18, 85, 194);
+    border-radius: 25px;
+    background-color: orange;
+    text-align: center;
+}
+.recomendacion__animepre__imagenpre{
+    min-width: 60%;
+    min-height: 60%;
+    width: 100%;
+    height: 100%;
+    max-width: 170px;
+    max-height: 270px;
+    /* margin-left: 13%; */
+    
+    
+    
+  
+}
+.recomendacion__animepre__nombre{
+    background-color: rgb(18, 85, 194);
+    font-size: 20px;
+    /* padding-left: 0; */
+    /* padding-right: 0; */
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+    border: 0px;
+    border-style: solid;
+    border-radius: 5px;
+    
+    color: white;
+    border-color:none;
+} 
+
+
+.recomendacion__animepre__valoracion{
+    background-color: rgb(18, 85, 194);
+    /* padding-left: ; */
+    /* padding-right: 0; */
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+    border: 0px;
+    border-style: solid;
+    border-radius: 5px;
+    
+    color: white;
+
+    
+}
+
+.recom{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.recom__seccion{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.recom__texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+.recom__texto__titulo{
+    
+    margin-left: 15%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;;
+    max-height: 200px;
+    background-color: rgb(18, 85, 194);
+    border: 2px;
+    border-style: solid;
+    border-radius: 45px;
+    border-color: rgb(206, 206, 207);
+    color: white;
+    font-family: 'Source Serif Pro', serif,Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.recom__texto__descrip{
+    margin: 30px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(206, 206, 207);
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(206, 206, 207);
+}
+.recom__lista__peliculas{
+    display: inline;
+}
+
+.piedepagina{
+    background-color: rgb(18, 85, 194);
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    align-items:flex-start;
+    border: 2px;
+    
+    border-style: solid;
+    border-color: rgb(18, 85, 194);
+    
+}
+.piedepagina__redes__iconos{
+    display: inline;
+}
+.piedepagina__redes__titulo{
+    
+    color: white;
+}
+.piedepagina__redes__iconos__redes{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.piedepagina__agradecimiento{
+   color: white; 
+}
+

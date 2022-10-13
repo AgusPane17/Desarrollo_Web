@@ -1,0 +1,235 @@
+body {
+    background-image: url(https://cutewallpaper.org/22/naruto-minimal-wallpapers/526523235.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px 30%;
+    background-attachment: fixed;
+    background-color: #ed8526;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    
+  
+}
+
+ header{
+    background-color: rgb(18, 85, 194);
+    margin: 0;
+    padding-bottom: 20px;  
+    
+
+ }
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    /* font-family: 'Ultra',Arial, Helvetica, sans-serif; */
+    font-family: 'Source Serif Pro', serif,Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+
+}
+a:visited{/* Funciona para evitar que el link aparesca morado */
+    text-decoration: none;
+    color: black; 
+
+}
+ul{
+    list-style: none;
+}
+
+/* CLASS */
+.titular{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100px;
+    height: 80px;
+}
+
+.menu {
+    
+    background-color:rgb(18, 85, 194) ;
+    
+    position: sticky;
+    top: -2px;
+    
+    
+}
+
+.menu__barra{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    /* z-index:2; */
+}
+.menu__barra__item{
+    margin-top: 0;
+    
+    margin-left: 0;
+    width: 100%;
+    max-width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* text-align: center; */
+    
+    background-color: rgb(189, 189, 189);
+    color: black;
+    font-size: 20px;
+
+    
+    border: 5px;
+    border-radius: 10px;
+    border-style:solid;
+    border-color: rgb(125, 125, 125);
+
+}
+
+
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+    background-color: rgba(18, 86, 194, 0.727);
+
+    border: 0px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 5%;
+}
+.presentacion__titulo{
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+
+    border: 0px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.presentacion__descripcion{
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+
+    border: 0px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.formulario__titulo{
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+
+    border: 0px;
+    border-style: solid;
+    border-radius: 10px;
+
+}
+
+.formulario__datos{
+    background-color: rgba(18, 86, 194, 0.736);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    height: 250px;
+    width: 50%;
+    max-width: 400px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(189, 189, 189);
+}
+.formulario__datos__cartel{
+    text-align: center;
+    background-color: #ed8526;
+    padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(189, 189, 189);
+
+}
+
+.formulario__datos__input{
+    margin: 10px;
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+
+    border: 0px;
+    border-style: solid;
+    border-radius: 10px;
+    
+}
+
+.formulario__datos__cartel__input--input{
+    outline: none;
+    
+}
+
+.formulario__datos__button{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* justify-items: center; */
+    margin-left: 43%;
+    margin-top: 10px;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+}
+
+
+.piedepagina{
+    background-color: rgb(18, 85, 194);
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    align-items:flex-start;
+    border: 2px;
+    
+    border-style: solid;
+    border-color: rgb(18, 85, 194);
+    
+}
+.piedepagina__redes__iconos{
+    display: inline;
+}
+.piedepagina__redes__titulo{
+    
+    color: white;
+}
+.piedepagina__redes__iconos__redes{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.piedepagina__agradecimiento{
+   color: white; 
+}
