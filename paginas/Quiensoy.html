@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        
     <link rel="stylesheet" href="../archivosCSS/turefotaku.css">
     
     
@@ -27,34 +32,21 @@
     <title>Quienes somos</title>
 </head>
 <body>
-        <header>
         
-            <section>
-                <div class="titular">
-                    <img class="logo"src="../imagenes/fondo.jpg" alt="">
-                    <h1>
-                        TuRefOtaku
-                    </h1>
-                    
-                </div>
-                
-                   
-                
-            </section>
-        
-        </header>
+    <header>
+      
+    </header>
+    <h1 class="titlepag">
+        TuRefOtaku
+    </h1>
         <main>
 
             <nav class="menu">
-                <ul class="menu__barra">
-                    <li> <a href="/Index.html"><input class="menu__barra__item" type="button" value="Inicio" name="menu"></a></li>
-                        <!-- <li> <a href="/Index.html #momento"><input class="menu__barra__item" type="button" value="Lo del momento" name="menu"></a></li> -->
-                    
-                    <li> <a href="/paginas/generos.html"><input class="menu__barra__item" type="button" value="Generos" name="menu"></a></li>
-                    <li> <a href="paginas/Quiensoy.html"><input class="menu__barra__item" type="button" value="Quien soy" name="menu"></a></li>
-                        <!-- <li> <a href="#redes"><input class="menu__barra__item" type="button" value="Nuestras Redes" name="menu"></a></li> -->
-                        
-                </ul>
+
+            <a href="/Index.html"><button class="button"  value="Inicio" name="menu">Inicio</button></a>       
+            <a href="/paginas/generos.html"><button class="button"  value="Quien Soy" name="menu">Generos</button></a>
+            <a href="/paginas/Quiensoy.html"><button class="button"  value="Inicio" name="menu">Quien Soy</button></a>
+
             </nav>
 
             
@@ -69,25 +61,42 @@
                 
                     </p>
             </section>
-                
+        
+
             <section class="formulario">
-                <h3 class="formulario__titulo">
-                    ¿Quieres ayudarme a hacer review?
-                </h3>
-                
-                <fieldset  class="formulario__datos">
-                    
-                    <legend class="formulario__datos__cartel"> Formulario de solicitud </legend>
-                    
-                    <label for="nombre"class="formulario__datos__input">Tu nombre: <input id="nombre" name="nombre" type="text" required />
-                    </label>
-                    <label for="apellido" class="formulario__datos__input">Tu apellido: <input id="apellido" name="apellido" type="text" required />
-                    </label>
-                    <label for="email"  class="formulario__datos__input">Dejame tu Email: <input class="formulario__datos__cartel__input--input" name="email" type="email" required />
-                    </label>
-                    <label for="formulario" ></label> <input name="formulario" type="submit" class="formulario__datos__button">
-                </fieldset>
-                  
+                <div class="form-group">
+                    <h3 class="formulario__titulo">
+                        ¿Quieres ayudarme a hacer review?
+                    </h3>
+                    <form>
+                        <fieldset class="formulario__datos">
+                            <legend class="formulario__datos__cartel"> Formulario de solicitud </legend>
+                            <div class="form-group">
+                                <label for="nombre"class="form-label">Tu nombre: 
+                                    <input class="form-control" placeholder="Introducir nombre" id="nombre" name="nombre" type="text" required />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido" class="form-label">Tu apellido: 
+                                    <input class="form-control" placeholder="Introducir apellido" id="apellido" name="apellido" type="text" required />
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Tu email:
+                                    <input type="email" class="form-control" placeholder="Introducir Email" id="email" aria-describedby="emailHelp">
+                                </label>
+                                    
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" class="form-check-input" id="checkbox">
+                                <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
+                            </div>
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </section>
         </main>
     <footer class="piedepagina">
