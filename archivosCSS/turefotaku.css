@@ -31,14 +31,9 @@ header {
 
 h1 {
   display: flex;
-  position: absolute;
-  justify-content: center;
   font-family: sans-serif;
-  font-family: sans-serif;
-  -webkit-text-stroke: 2px rgb(185, 92, 31);
-  margin-bottom: 5px;
-  margin-left: 3%;
-  margin-top: 1%;
+  -webkit-text-stroke: 1px rgb(202, 127, 77);
+
   color: transparent;
   font-size: 80px;
   font-weight: 700;
@@ -46,9 +41,17 @@ h1 {
   background-image: linear-gradient(180deg, yellow, #ed8526);
   background-clip: text;
   -webkit-background-clip: text;
+  height: 80px;
 
-  /* text-shadow: #ed8526; */
+  animation: backInLeft;
+  animation-duration: 2s;
+
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
 h2 {
   font-family: sans-serif;
 }
@@ -65,32 +68,31 @@ ul {
   list-style: none;
 }
 /*CLASS*/
-.titular {
+/* .titular {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
-.logo {
-  margin-left: 10px;
-  width: 100px;
-  height: 80px;
-  border-radius: 10px;
-  display: flex;
-  position: sticky;
-  top: -2px;
-}
+} */
 
-.menu {
+.barra {
   background-color: rgb(18, 85, 194);
-  position: sticky;
-  top: -2px;
+  /* height: 500px; */
+  padding: 10px;
   display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  top: -2px;
+}
+.barra__menu {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
   justify-content: space-evenly;
-  margin-top: 0;
-  padding-left: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  top: 0;
+  /* margin-top: 0; */
+  /* padding-left: 0; */
+  padding-top: 20px;
+  /* padding-bottom: 5px; */
+  /* top: 50%; */
 }
 
 .button {
@@ -146,13 +148,7 @@ ul {
   flex-direction: column;
   margin-top: 10px;
 }
-/* .trailer__titulo{
-    width: 100%;
-    height: 50px;
-    
 
-
-} */
 .trailer__titulo__texto {
   margin-left: 15%;
   display: flex;
@@ -166,7 +162,6 @@ ul {
   border-color: rgb(206, 206, 207);
   color: white;
   font-family: sans-serif;
-  /* font-size: 20px; */
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -183,13 +178,13 @@ ul {
 
 .contenedor {
   display: grid;
-  /* place-content: center; */
+  
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 40px;
   height: 1150px;
   grid-gap: 20px;
-  /* background-color: black; */
+  
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 4fr;
   grid-template-areas:
@@ -198,12 +193,11 @@ ul {
 }
 .contenedor1 {
   grid-area: contenedor1;
-  /* background-color: aqua; */
+  
 }
 
 .contenedor2 {
   grid-area: contenedor2;
-  
 }
 .contenedor3 {
   grid-area: contenedor3;
@@ -213,8 +207,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* justify-items: center; */
-  /* align-items: center; */
+
   flex-wrap: wrap;
   transition: all 500ms ease;
 }
@@ -222,17 +215,18 @@ ul {
 /*  */
 
 .recomendacion__animepre {
+  min-width: 100px;
+  min-height: 150px;
   width: 270px;
   height: 450px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   padding: 30px;
+
   
 
-  align-content: center;
-
-  border: 2px;
+  border: 0px;
   border-style: solid;
 
   border-color: rgb(18, 85, 194);
@@ -241,10 +235,8 @@ ul {
   text-align: center;
 }
 .recomendacion__animepre__imagenpre {
-
-
-  min-width: 60%;
-  min-height: 60%;
+  min-width: 150px;
+  min-height: 200px;
   width: 100%;
   height: 100%;
   max-width: 170px;
@@ -253,91 +245,71 @@ ul {
   margin-top: 20px;
 
   margin-bottom: 20px;
-  transition: all 500ms ease;
+}
+
+.recomendacion
+  .recomendacion__animepre
+  .recomendacion__animepre__imagenpre__capa {
+  margin-left: -30px;
+  margin-top: -30px;
   
+  padding: 30px;
+
+  min-width: 100px;
+  min-height: 150px;
+  width: 270px;
+  height: 450px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-content: center;
+  border: 2px;
+
+  border-radius: 25px;
+
+  position: absolute;
+  background: orange;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: inherit;
 }
 
-/* .recomendacion__animepre__imagenpre:hover {
-  transform: scale(1.1);
-} */
-
-/* .recomendacion__animepre__imagenpre__capa{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100;
-    background: rgba(7, 247, 87, 0.592);
-    transition: all 500ms ease;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
-    
+.recomendacion
+  .recomendacion__animepre:hover
+  >.recomendacion__animepre__imagenpre__capa {
+  opacity: 1;
+  visibility: visible;
 }
 
-.recomendacion__animepre:hover > .recomendacion__animepre__imagenpre__capa{
-    opacity: 1;
-    visibility: visible;
-} */
+.recomendacion
+  .recomendacion__animepre
+  .recomendacion__animepre__imagenpre__capa
+  h4 {
+  color: black;
+  font-size: 25px;
 
-.recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa{
-    
-    margin-left: -30px;
-    margin-top: -30px;
-    width: 266px;
-    height: 445px;
-    display: flex;
-    flex-direction: column;  
-    
-    /* transition: all 500ms ease; */
-    justify-content: center;
-    align-content: center;
-    border: 2px;
-    
-    
-
-    border-radius: 25px;
-
-    position: absolute;
-    background: orange;
-    transition: all 500ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center;
+  font-family: sans-serif;
+  transition: all 500ms ease-out;
+  margin-top: 5px;
+  margin: auto;
 }
 
-.recomendacion .recomendacion__animepre:hover > .recomendacion__animepre__imagenpre__capa{
-    opacity: 1;
-    visibility: visible;
-    padding: 10px;
-}
+.recomendacion
+  .recomendacion__animepre
+  .recomendacion__animepre__imagenpre__capa
+  p {
+  color: black;
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 1;
 
-/* .recomendacion .recomendacion__animepre:hover > .recomendacion__animepre__imagenpre__capa h4{
-    margin-top: 5px;
-    margin-bottom: 10px;
-
-}    */
-.recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa h4{
-    color: black;
-    font-size: 25px;
-    /* font-weight: 400px; */
-    font-family: sans-serif;
-    /* height: 80px; */
-    /* margin-bottom: px; */
-    transition: all 500ms ease-out;
-    margin-top: 5px;
-    margin: auto;
-}
-
-.recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa p{
-    color: black;
-    font-size: 18px;
-    font-family: sans-serif;
-    line-height: 1;
-
-    text-align: center;
-    width: 100%;
-    max-width: 250px;
-    margin: auto;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
 }
 
 .recomendacion__animepre__nombre {
@@ -421,7 +393,6 @@ ul {
   border-color: rgb(206, 206, 207);
 }
 
-
 /* PAGINA: GENEROS PAGINAS */
 
 .generos {
@@ -463,66 +434,6 @@ ul {
   border-style: solid;
   border-radius: 10px;
 }
-
-/* 
-
-.recomendacion{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-
-}
-
-.recomendacion__animepre{
-    margin: 10px;
-    display: flex;
-    flex-direction: column;  
-    padding: 30px;  
-
-    align-content: center;
-    border: 2px;
-    border-style: solid;
-    
-    border-color:rgb(18, 85, 194);
-    border-radius: 25px;
-    background-color: orange;
-    text-align: center;
-}
-.recomendacion__animepre__imagenpre{
-    min-width: 60%;
-    min-height: 60%;
-    width: 100%;
-    height: 100%;
-    max-width: 170px;
-    max-height: 270px;
-
-}
-.recomendacion__animepre__nombre{
-    background-color: rgb(18, 85, 194);
-    font-size: 20px;
-    border: 0px;
-    border-style: solid;
-    border-radius: 5px;
-    
-    color: white;
-    border-color:none;
-} 
-
-
-.recomendacion__animepre__valoracion{
-    background-color: rgb(18, 85, 194);
-    /* padding-left: ; */
-/* padding-right: 0; */
-/* margin-left: 40px; */
-/* margin-right: 40px; */
-/* border: 0px;
-    border-style: solid;
-    border-radius: 5px;
-    
-    color: white;
-
-    
-} */
 
 /* PAGINA: GENEROS*/
 
@@ -678,8 +589,6 @@ ul {
   border-color: rgb(189, 189, 189);
 }
 
-
-
 .form-label {
   margin: 10px;
   background-color: rgb(189, 189, 189);
@@ -695,11 +604,11 @@ ul {
 }
 
 .btn-success {
-    color: #fff;
-    background-color: #ed8526;
-    border-color: #ed8526;
-    margin: 20px;
-    padding: 10px;
+  color: #fff;
+  background-color: #ed8526;
+  border-color: #ed8526;
+  margin: 20px;
+  padding: 10px;
 }
 /* PAGINA: QUIENSOY*/
 
