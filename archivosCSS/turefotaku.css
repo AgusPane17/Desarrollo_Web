@@ -101,46 +101,31 @@ ul {
   width: 100%;
   max-width: auto;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 35px;
 
-  padding-left: 10px;
-  padding-right: 10px;
+
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  background-color: #ed8526;
-  color: black;
-  border: 2px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: rgb(125, 125, 125);
-  color: white;
+  /* background-color: #ed8526; */
+  color:orange;
+  font-weight: 700;
+  -webkit-text-stroke: 0.2px white;
+  letter-spacing: -0.020em;
+  
+  border: 0px;
+  background-color: transparent;
+  transition: 0.8s;
+  object-fit: cover;
+  
 }
-.button--active {
-  margin-top: 0;
-  margin-left: 0;
-  width: 100%;
-  max-width: auto;
-  font-family: sans-serif;
-  font-size: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  background-color: #ed8526;
-  color: black;
-  border: 2px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: rgb(8, 0, 255);
-  color: rgb(17, 0, 255);
-}
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0.3s;
+
+
+.button:hover{
+  transform: scale(1.2);
+
 }
 
 .trailer {
@@ -253,6 +238,10 @@ ul {
   margin-left: -30px;
   margin-top: -30px;
   
+  background-color: rgb(197, 171, 97);
+  background-image: url(/imagenes/bojjifondo.jpg);
+  background-size: 100%;
+
   padding: 30px;
 
   min-width: 100px;
@@ -270,7 +259,7 @@ ul {
   border-radius: 25px;
 
   position: absolute;
-  background: orange;
+  /* background: orange; */
   transition: all 500ms ease-out;
   opacity: 0;
   visibility: hidden;
@@ -295,6 +284,14 @@ ul {
   transition: all 500ms ease-out;
   margin-top: 5px;
   margin: auto;
+
+  margin-bottom: 5px;
+  font-size: 17px;
+
+  background-color: #808080e0;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
 }
 
 .recomendacion
@@ -305,6 +302,15 @@ ul {
   font-size: 18px;
   font-family: sans-serif;
   line-height: 1;
+
+  font-size: 17px;
+
+  background-color: #808080e0;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  
+  
 
   text-align: center;
   width: 100%;
@@ -496,12 +502,12 @@ ul {
   text-align: center;
 }
 #genero_generos__contenedor__catalogo__genespecific--accion {
-  background-image: url(/imagenes/generoAccion.jpg);
+  background-image: url(/imagenes/generoAccion-min.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 #genero_generos__contenedor__catalogo__genespecific--romance {
-  background-image: url(/imagenes/animeRomance.jpg);
+  background-image: url(/imagenes/animeRomance-min.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
