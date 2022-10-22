@@ -1,3 +1,8 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   background-image: url(https://cutewallpaper.org/22/naruto-minimal-wallpapers/526523235.jpg);
   background-repeat: no-repeat;
@@ -5,11 +10,15 @@ body {
   background-position: 0px 30%;
   background-attachment: fixed;
   background-color: #ed8526;
-  display: flex;
-  flex-direction: column;
+
   margin: 0px;
   min-height: 100%;
   width: 100%;
+  /* position: relative; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 header {
@@ -27,6 +36,10 @@ header {
   padding-bottom: 130px;
   width: 100%;
   text-align: center;
+}
+
+main {
+  margin-bottom: 200px;
 }
 
 h1 {
@@ -103,29 +116,25 @@ ul {
   font-family: sans-serif;
   font-size: 35px;
 
-
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   /* background-color: #ed8526; */
-  color:orange;
+  color: orange;
   font-weight: 700;
   -webkit-text-stroke: 0.2px white;
-  letter-spacing: -0.020em;
-  
+  letter-spacing: -0.02em;
+
   border: 0px;
   background-color: transparent;
   transition: 0.8s;
   object-fit: cover;
-  
 }
 
-
-.button:hover{
+.button:hover {
   transform: scale(1.2);
-
 }
 
 .trailer {
@@ -159,26 +168,27 @@ ul {
 
 .trailer__galeri__video {
   padding: 15px;
+  width: 560px;
+  height: 315px;
 }
 
 .contenedor {
   display: grid;
-  
+
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 40px;
   height: 1150px;
   grid-gap: 20px;
-  
+
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 2fr;
   grid-template-areas:
     "contenedor1 contenedor1"
     "contenedor2 contenedor3";
 }
 .contenedor1 {
   grid-area: contenedor1;
-  
 }
 
 .contenedor2 {
@@ -200,16 +210,13 @@ ul {
 /*  */
 
 .recomendacion__animepre {
-  min-width: 100px;
-  min-height: 150px;
+ 
   width: 270px;
   height: 450px;
-  margin: 10px;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   padding: 30px;
-
-  
 
   border: 0px;
   border-style: solid;
@@ -220,13 +227,13 @@ ul {
   text-align: center;
 }
 .recomendacion__animepre__imagenpre {
-  min-width: 150px;
-  min-height: 200px;
+ 
   width: 100%;
   height: 100%;
   max-width: 170px;
   max-height: 470px;
-  margin-left: 10%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   margin-top: 20px;
 
   margin-bottom: 20px;
@@ -237,7 +244,7 @@ ul {
   .recomendacion__animepre__imagenpre__capa {
   margin-left: -30px;
   margin-top: -30px;
-  
+
   background-color: rgb(197, 171, 97);
   background-image: url(/imagenes/bojjifondo.jpg);
   background-size: 100%;
@@ -268,7 +275,7 @@ ul {
 
 .recomendacion
   .recomendacion__animepre:hover
-  >.recomendacion__animepre__imagenpre__capa {
+  > .recomendacion__animepre__imagenpre__capa {
   opacity: 1;
   visibility: visible;
 }
@@ -309,8 +316,6 @@ ul {
   padding: 10px;
   border: 0px;
   border-radius: 5px;
-  
-  
 
   text-align: center;
   width: 100%;
@@ -432,9 +437,9 @@ ul {
   text-align: center;
   background-color: rgb(189, 189, 189);
   width: 450px;
-  margin-left: 30%;
-
-  padding: 5px;
+  margin-left: 20%;
+  font-size: 20px;
+  padding: 10px;
 
   border: 0;
   border-style: solid;
@@ -632,11 +637,14 @@ ul {
   border-style: solid;
   border-color: rgb(18, 85, 194);
 
-  width: 99, 5%;
+  /* width: 99, 5%; */
+  margin-top: auto;
+  width: 100%;
   bottom: 0;
   margin-bottom: 0;
 }
-.piedepagina-generos {
+
+/* .piedepagina-generos {
   background-color: rgb(18, 85, 194);
   display: flex;
   flex-direction: column;
@@ -651,7 +659,7 @@ ul {
   width: 100%;
   bottom: 0;
   margin-bottom: 0;
-}
+} */
 
 .piedepagina__redes__iconos {
   display: inline;
@@ -670,4 +678,343 @@ ul {
 .piedepagina__agradecimiento {
   color: white;
   padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    display: flex;
+    font-family: sans-serif;
+    -webkit-text-stroke: 1px rgb(202, 127, 77);
+
+    color: transparent;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    background-image: linear-gradient(180deg, yellow, #ed8526);
+    background-clip: text;
+    -webkit-background-clip: text;
+    height: 40px;
+
+    animation: backInLeft;
+    animation-duration: 2s;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contenedor {
+    display: grid;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    height: 1150px;
+    grid-gap: 20px;
+    margin-bottom: 30px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas:
+      "contenedor1 "
+      "contenedor2"
+      "contenedor3";
+  }
+  .contenedor1 {
+    grid-area: contenedor1;
+  }
+
+  .contenedor2 {
+    grid-area: contenedor2;
+  }
+  .contenedor3 {
+    grid-area: contenedor3;
+  }
+
+  .trailer {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas:
+      "titulo"
+      "videos";
+    margin: 20px;
+    /* margin-top: 10px; */
+  }
+
+  .trailer__titulo__texto {
+    grid-area: titulo;
+    margin-left: 15%;
+    display: grid;
+    justify-content: center;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: rgb(18, 85, 194);
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(206, 206, 207);
+    color: white;
+    font-family: sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .trailer__galeri {
+    display: grid;
+    padding: 5px;
+    grid-area: "videos";
+    grid-template-areas:
+      "video1"
+      "video2";
+  }
+
+  .trailer__galeri__video {
+    padding: 15px;
+  }
+
+  .trailer__galeri__video .video1 {
+    grid-area: video1;
+    width: 70%;
+    height: 100%;
+  }
+  .trailer__galeri__video .video2 {
+    grid-area: video2;
+    width: 70%;
+    height: 100%;
+  }
+
+  .barra {
+    background-color: rgb(18, 85, 194);
+    /* height: 500px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    top: -2px;
+  }
+  .barra__menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    /* margin-top: 0; */
+    /* padding-left: 0; */
+    padding-top: 20px;
+    /* padding-bottom: 5px; */
+    /* top: 50%; */
+  }
+
+  .button {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    max-width: auto;
+    font-family: sans-serif;
+    font-size: 15px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    /* background-color: #ed8526; */
+    color: orange;
+    font-weight: 700;
+    -webkit-text-stroke: 0.2px white;
+    letter-spacing: -0.02em;
+
+    border: 0px;
+    background-color: transparent;
+    transition: 0.8s;
+    object-fit: cover;
+  }
+
+  .recomendacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    transition: all 500ms ease;
+  }
+
+  /*  */
+
+  .recomendacion__animepre {
+    width: 100px;
+    height: 200px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    border: 0px;
+    border-style: solid;
+
+    border-color: rgb(18, 85, 194);
+    border-radius: 15px;
+    background-color: orange;
+    text-align: center;
+  }
+  .recomendacion__animepre__imagenpre {
+    width: 50px;
+    height: 400px;
+    margin: 0;
+    margin-left: 15%;
+    /* margin-top: 5px; */
+
+    margin-bottom: 5px;
+  }
+
+  .recomendacion
+    .recomendacion__animepre
+    .recomendacion__animepre__imagenpre__capa {
+    margin-left: -15px;
+    margin-top: -15px;
+
+    background-color: rgb(197, 171, 97);
+    background-image: url(/imagenes/bojjifondo.jpg);
+    background-size: 100%;
+
+    padding: 10px;
+
+    width: 100px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-content: center;
+    border: 2px;
+
+    border-radius: 15px;
+
+    position: absolute;
+    /* background: orange; */
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: inherit;
+  }
+
+  .recomendacion
+    .recomendacion__animepre:hover
+    > .recomendacion__animepre__imagenpre__capa {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .recomendacion
+    .recomendacion__animepre
+    .recomendacion__animepre__imagenpre__capa
+    h4 {
+    color: black;
+    font-size: 10px;
+
+    font-family: sans-serif;
+    transition: all 500ms ease-out;
+    margin-top: 5px;
+    margin: auto;
+
+    margin-bottom: 5px;
+    /* font-size: 17px; */
+
+    background-color: #808080e0;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+  }
+
+  .recomendacion
+    .recomendacion__animepre
+    .recomendacion__animepre__imagenpre__capa
+    p {
+    color: black;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 1;
+
+    font-size: 9px;
+
+    background-color: #808080e0;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+  }
+
+  .recomendacion__animepre__nombre {
+    background-color: rgb(18, 85, 194);
+    font-size: 10px;
+    /* padding-left: 0; */
+    /* padding-right: 0; */
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+    border: 0px;
+    border-style: solid;
+    border-radius: 5px;
+
+    color: white;
+    border-color: none;
+  }
+
+  .recomendacion__animepre__valoracion {
+    background-color: rgb(18, 85, 194);
+    /* padding-left: ; */
+    /* padding-right: 0; */
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+    border: 0px;
+    border-style: solid;
+    border-radius: 5px;
+
+    color: white;
+    font-size: 10px;
+  }
+
+  /* .recom {
+    margin: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    align-items: center;
+  }
+} */
+@media screen and (max-width: 320px) {
+  .contenedor {
+    display: grid;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    height: 1150px;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas:
+      "contenedor1 "
+      "contenedor2"
+      "contenedor3";
+  }
+  .contenedor1 {
+    grid-area: contenedor1;
+  }
+
+  .contenedor2 {
+    grid-area: contenedor2;
+  }
+  .contenedor3 {
+    grid-area: contenedor3;
+  }
+}
 }
