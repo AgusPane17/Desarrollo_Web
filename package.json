@@ -1,0 +1,24 @@
+{
+  "name": "proyentrega3",
+  "version": "1.0.0",
+  "description": "Proyecto de pagina web con sass y con responsive entrega 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/turefotaku.scss archivosCSS/turefotaku.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgusPane17/Preentraga3.git"
+  },
+  "author": "pane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AgusPane17/Preentraga3/issues"
+  },
+  "homepage": "https://github.com/AgusPane17/Preentraga3#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
