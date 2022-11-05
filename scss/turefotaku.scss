@@ -3,7 +3,7 @@
 //   Variables
   
 //   Export
-    @import "_colores"; 
+    @import "_colores"; //actualizara futuro @use-based
     
 
     $breakpoints: (
@@ -215,6 +215,15 @@
     display: flex;
     flex-direction: column;
     margin-top: $trailers_margentop;
+
+    @include media-up(lg){
+    grid-template-columns: 1fr;
+      grid-template-rows: 1fr 6fr;
+      grid-template-areas:
+        "titulo"
+        "videos";
+      margin: 20px;
+    }
   }
   
 
@@ -224,6 +233,8 @@
   $paddingtitulotrailer:5px;
 
   .trailer__titulo__texto {
+    grid-area: titulo;
+
     margin-left: $margentitulotrailer;
     display: flex;
     justify-content: center;
@@ -248,6 +259,15 @@
     padding: $trailerGaleriaPadding;
     justify-content: center;
     align-content: center;
+
+    @include media-up(lg){
+    display: grid;
+      padding: 5px;
+      grid-area: "videos";
+      grid-template-areas:
+        "video1"
+        "video2";
+      }
   }
 
   $tamañoVideo_x:560px;
@@ -259,6 +279,20 @@
     padding: 15px;
     width: $tamañoVideo_x;
     height: $tamañoVideo_y;
+
+    @include media-up(lg){
+    .video1{
+      grid-area: video1;
+            width: calc($tamañoVideo_x/2);
+            height: calc($tamañoVideo_y/2);
+    }
+    .video2{
+      grid-area: video2;
+      width: calc($tamañoVideo_x/2);
+      height: calc($tamañoVideo_y/2);
+    }
+    
+  }
   }
   
 
@@ -302,6 +336,18 @@
     grid-template-areas:
       "contenedor1 contenedor1"
       "contenedor2 contenedor3";
+
+      @include media-up(lg){
+        
+        
+      
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-areas:
+        "contenedor1 "
+        "contenedor2"
+        "contenedor3";
+      } 
   }
   .contenedor1 {
     grid-area: contenedor1;
@@ -346,6 +392,35 @@
     border-radius: $recomBorederRadio;
     background-color: $colorref1;
     text-align: center;
+
+    @include media-up(lg){
+    width: calc($recom_ancho/1.3);
+    height: calc($recom_alto/1.3);
+    margin: calc($margenRecom/1.3);
+    padding: calc($recom_padding/1.3);
+    border-radius: calc($recomBorederRadio/1.3);
+    
+    }
+    @include media-up(md){
+      width: calc($recom_ancho/1.8);
+      height: calc($recom_alto/1.8);
+      margin: calc($margenRecom/1.8);
+      padding: calc($recom_padding/1.8);
+      border-radius: calc($recomBorederRadio/1.8);
+      
+    }
+      @include media-up(sm){
+        width: calc($recom_ancho/2);
+        height: calc($recom_alto/2);
+        margin: calc($margenRecom/2);
+        padding: calc($recom_padding/2);
+        border-radius: calc($recomBorederRadio/2);
+        
+    }
+
+
+
+
   }
 
 
@@ -365,6 +440,40 @@
     margin-top: $imagenRecom_MarginVertical;
   
     margin-bottom: $imagenRecom_MarginVertical;
+  
+    @include media-up(lg){
+      
+      max-width: calc($imagenRecomMaxAncho/1.2);
+      max-height: calc($imagenRecomMaxAlto/1.2);
+      margin-left: calc($imagenRecom_MarginCostados/1.2);
+      margin-right: calc($imagenRecom_MarginCostados/1.2);
+      margin-top: calc($imagenRecom_MarginVertical/1.2);
+  
+      margin-bottom: calc($imagenRecom_MarginVertical/1.2);
+      
+      }
+      @include media-up(md){
+
+      max-width: calc($imagenRecomMaxAncho/1.6);
+      max-height: calc($imagenRecomMaxAlto/1.6);
+      margin-left: calc($imagenRecom_MarginCostados/1.6);
+      margin-right: calc($imagenRecom_MarginCostados/1.6);
+      margin-top: calc($imagenRecom_MarginVertical/1.6);
+      margin-bottom: calc($imagenRecom_MarginVertical/1.6);
+        
+      }
+        @include media-up(sm){
+          max-width: calc($imagenRecomMaxAncho/2);
+      max-height: calc($imagenRecomMaxAlto/2);
+      margin-left: calc($imagenRecom_MarginCostados/2);
+      margin-right: calc($imagenRecom_MarginCostados/2);
+      margin-top: calc($imagenRecom_MarginVertical/2);
+      margin-bottom: calc($imagenRecom_MarginVertical/2);
+          
+      }
+  
+  
+  
   }
 
 
@@ -410,6 +519,35 @@
       opacity: 0;
       visibility: hidden;
       text-align: inherit;
+
+      @include media-up(lg){
+      margin-left: calc($recomCapaReacomodo/1.3);
+      margin-top: calc($recomCapaReacomodo/1.3);
+      padding: calc($recomCapaPadding/1.3);
+      width: calc($recomCapaAncho/1.3);
+      height: calc($recomCapaAlto/1.3);
+      border-radius: calc($recomCapaBordeRadio/1.3);
+      
+      
+        }
+        @include media-up(md){
+          margin-left: calc($recomCapaReacomodo/1.8);
+      margin-top: calc($recomCapaReacomodo/1.8);
+      padding: calc($recomCapaPadding/1.8);
+      width: calc($recomCapaAncho/1.8) ;
+      height: calc($recomCapaAlto/1.8);
+      border-radius: calc($recomCapaBordeRadio/1.8);
+  
+       
+        }
+          @include media-up(sm){
+            margin-left: calc($recomCapaReacomodo/2);
+      margin-top: calc($recomCapaReacomodo/2);
+      padding: calc($recomCapaPadding/2);
+      width: calc($recomCapaAncho/2) ;
+      height: calc($recomCapaAlto/2);
+      border-radius: calc($recomCapaBordeRadio/2);
+        }
     }
   
   
@@ -434,13 +572,14 @@
     .recomendacion__animepre
     .recomendacion__animepre__imagenpre__capa
     h4 {
+
     color: $colorRecomCapaTexto;
   
     font-family: sans-serif;
     transition: all 500ms ease-out;
     margin-top: $recomCapah4Marge;
     margin-bottom: $recomCapah4Marge;
-    margin: auto;
+    
   
     
     font-size: $recomCapah4LetraTamaño;
@@ -449,6 +588,37 @@
     padding: $recomCapah4Padding;
     border: $recomCapah4Border;
     border-radius: $recomCapah4BorderRadio;
+
+      
+    @include media-up(lg){
+      font-size: calc($recomCapah4LetraTamaño/1.3);
+    margin-top: calc($recomCapah4Marge/1.3);
+    margin-bottom: calc($recomCapah4Marge/1.3);
+    
+    padding: calc($recomCapah4Padding/1.3);
+    border: calc($recomCapah4Border/1.3);
+    border-radius: calc($recomCapah4BorderRadio/1.3);
+    
+    }
+    @include media-up(md){
+      font-size: calc($recomCapah4LetraTamaño/1.8);
+      margin-top: calc($recomCapah4Marge/1.8);
+      margin-bottom: calc($recomCapah4Marge/1.8);
+      
+      padding: calc($recomCapah4Padding/1.8);
+      border: calc($recomCapah4Border/1.8);
+      border-radius: calc($recomCapah4BorderRadio/1.8);  
+    }
+    @include media-up(sm){
+      font-size: calc($recomCapah4LetraTamaño/2);
+      margin-top: calc($recomCapah4Marge/2);
+    margin-bottom: calc($recomCapah4Marge/2);
+    
+    padding: calc($recomCapah4Padding/2);
+    border: calc($recomCapah4Border/2);
+    border-radius: calc($recomCapah4BorderRadio/2);
+   }
+
   }
   
 
@@ -478,6 +648,30 @@
     width: 100%;
     max-width: $recomCapaPAnchoMax;
     margin: auto;
+
+    @include media-up(lg){
+      font-size: calc($recomCapaPTamañoTexto/1.3);
+      max-width: calc($recomCapaPAnchoMax/1.3);
+      border-radius: calc($recomCapaPBorderRadio/1.3);
+    
+    padding: calc($recomCapaPPadding/1.3);
+   
+    
+    }
+    @include media-up(md){
+      font-size: calc($recomCapaPTamañoTexto/1.8);
+      max-width: calc($recomCapaPAnchoMax/1.8);
+      border-radius: calc($recomCapaPBorderRadio/1.8);
+    
+    padding: calc($recomCapaPPadding/1.8); 
+    }
+    @include media-up(sm){
+      font-size: calc($recomCapaPTamañoTexto/2);
+      max-width: calc($recomCapaPAnchoMax/2);
+      border-radius: calc($recomCapaPBorderRadio/2);
+    
+    padding: calc($recomCapaPPadding/2);
+   }
   }
   
    
@@ -494,17 +688,45 @@
   
     color: $colorTextoRecom;
     border-color: none;
+
+    @include media-up(lg){
+      font-size: calc($recomNombreTamañoTexto/1.2);
+      border-radius: calc($recomNombreBorderRadio/1.2);
+    }
+    @include media-up(md){
+      font-size: calc($recomNombreTamañoTexto/1.6);
+      border-radius: calc($recomNombreBorderRadio/1.6)
+      
+    }
+    @include media-up(sm){
+      font-size: calc($recomNombreTamañoTexto/2);
+      border-radius: calc($recomNombreBorderRadio/2)   
+    }
   }
-  
+  $recomPuntajeTamañoTexto: 15px;
   $recomValoracionRadio: 5px;
   .recomendacion__animepre__valoracion {
     background-color: rgb(18, 85, 194);
-    
+    font-size: $recomPuntajeTamañoTexto;
     border: 0px;
     border-style: solid;
     border-radius: $recomValoracionRadio;
   
     color: $colorTextoRecom;
+
+    @include media-up(lg){
+      font-size: calc($recomPuntajeTamañoTexto/1.2);
+      border-radius: calc($recomNombreBorderRadio/1.2);
+    }
+    @include media-up(md){
+      font-size: calc($recomPuntajeTamañoTexto/1.6);
+      border-radius: calc($recomNombreBorderRadio/1.6)
+      
+    }
+    @include media-up(sm){
+      font-size: calc($recomPuntajeTamañoTexto/2);
+      border-radius: calc($recomNombreBorderRadio/2)   
+    }
   }
   
 

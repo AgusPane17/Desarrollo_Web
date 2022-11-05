@@ -174,8 +174,17 @@ ul {
   flex-direction: column;
   margin-top: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .trailer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: "titulo" "videos";
+    margin: 20px;
+  }
+}
 
 .trailer__titulo__texto {
+  grid-area: titulo;
   margin-left: 15%;
   display: flex;
   justify-content: center;
@@ -199,11 +208,31 @@ ul {
   justify-content: center;
   align-content: center;
 }
+@media screen and (max-width: 1200px) {
+  .trailer__galeri {
+    display: grid;
+    padding: 5px;
+    grid-area: "videos";
+    grid-template-areas: "video1" "video2";
+  }
+}
 
 .trailer__galeri__video {
   padding: 15px;
   width: 560px;
   height: 315px;
+}
+@media screen and (max-width: 1200px) {
+  .trailer__galeri__video .video1 {
+    grid-area: video1;
+    width: 280px;
+    height: 157.5px;
+  }
+  .trailer__galeri__video .video2 {
+    grid-area: video2;
+    width: 280px;
+    height: 157.5px;
+  }
 }
 
 .recom__titulo__texto {
@@ -234,6 +263,13 @@ ul {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas: "contenedor1 contenedor1" "contenedor2 contenedor3";
+}
+@media screen and (max-width: 1200px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "contenedor1 " "contenedor2" "contenedor3";
+  }
 }
 
 .contenedor1 {
@@ -271,6 +307,33 @@ ul {
   background-color: orange;
   text-align: center;
 }
+@media screen and (max-width: 1200px) {
+  .recomendacion__animepre {
+    width: 207.6923076923px;
+    height: 346.1538461538px;
+    margin: 0.7692307692rem;
+    padding: 23.0769230769px;
+    border-radius: 19.2307692308px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion__animepre {
+    width: 150px;
+    height: 250px;
+    margin: 0.5555555556rem;
+    padding: 16.6666666667px;
+    border-radius: 13.8888888889px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion__animepre {
+    width: 135px;
+    height: 225px;
+    margin: 0.5rem;
+    padding: 15px;
+    border-radius: 12.5px;
+  }
+}
 
 .recomendacion__animepre__imagenpre {
   width: 100%;
@@ -281,6 +344,36 @@ ul {
   margin-right: 1.5rem;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .recomendacion__animepre__imagenpre {
+    max-width: 141.6666666667px;
+    max-height: 391.6666666667px;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-top: 16.6666666667px;
+    margin-bottom: 16.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion__animepre__imagenpre {
+    max-width: 106.25px;
+    max-height: 293.75px;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion__animepre__imagenpre {
+    max-width: 85px;
+    max-height: 235px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .recomendacion__animepre .recomendacion__animepre__imagenpre__capa {
@@ -305,6 +398,36 @@ ul {
   visibility: hidden;
   text-align: inherit;
 }
+@media screen and (max-width: 1200px) {
+  .recomendacion__animepre .recomendacion__animepre__imagenpre__capa {
+    margin-left: -23.0769230769px;
+    margin-top: -23.0769230769px;
+    padding: 23.0769230769px;
+    width: 207.6923076923px;
+    height: 346.1538461538px;
+    border-radius: 19.2307692308px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion__animepre .recomendacion__animepre__imagenpre__capa {
+    margin-left: -16.6666666667px;
+    margin-top: -16.6666666667px;
+    padding: 16.6666666667px;
+    width: 150px;
+    height: 250px;
+    border-radius: 13.8888888889px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion__animepre .recomendacion__animepre__imagenpre__capa {
+    margin-left: -15px;
+    margin-top: -15px;
+    padding: 15px;
+    width: 135px;
+    height: 225px;
+    border-radius: 12.5px;
+  }
+}
 
 .recomendacion .recomendacion__animepre:hover > .recomendacion__animepre__imagenpre__capa {
   opacity: 1;
@@ -317,12 +440,41 @@ ul {
   transition: all 500ms ease-out;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin: auto;
   font-size: 17px;
   background-color: rgba(128, 128, 128, 0.8784313725);
   padding: 10px;
   border: 0px;
   border-radius: 5px;
+}
+@media screen and (max-width: 1200px) {
+  .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa h4 {
+    font-size: 13.0769230769px;
+    margin-top: 3.8461538462px;
+    margin-bottom: 3.8461538462px;
+    padding: 7.6923076923px;
+    border: 0px;
+    border-radius: 3.8461538462px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa h4 {
+    font-size: 9.4444444444px;
+    margin-top: 2.7777777778px;
+    margin-bottom: 2.7777777778px;
+    padding: 5.5555555556px;
+    border: 0px;
+    border-radius: 2.7777777778px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa h4 {
+    font-size: 8.5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 2.5px;
+  }
 }
 
 .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa p {
@@ -339,6 +491,30 @@ ul {
   max-width: 250px;
   margin: auto;
 }
+@media screen and (max-width: 1200px) {
+  .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa p {
+    font-size: 13.0769230769px;
+    max-width: 192.3076923077px;
+    border-radius: 3.8461538462px;
+    padding: 7.6923076923px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa p {
+    font-size: 9.4444444444px;
+    max-width: 138.8888888889px;
+    border-radius: 2.7777777778px;
+    padding: 5.5555555556px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion .recomendacion__animepre .recomendacion__animepre__imagenpre__capa p {
+    font-size: 8.5px;
+    max-width: 125px;
+    border-radius: 2.5px;
+    padding: 5px;
+  }
+}
 
 .recomendacion__animepre__nombre {
   background-color: rgb(18, 85, 194);
@@ -349,13 +525,50 @@ ul {
   color: white;
   border-color: none;
 }
+@media screen and (max-width: 1200px) {
+  .recomendacion__animepre__nombre {
+    font-size: 16.6666666667px;
+    border-radius: 4.1666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion__animepre__nombre {
+    font-size: 12.5px;
+    border-radius: 3.125px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion__animepre__nombre {
+    font-size: 10px;
+    border-radius: 2.5px;
+  }
+}
 
 .recomendacion__animepre__valoracion {
   background-color: rgb(18, 85, 194);
+  font-size: 15px;
   border: 0px;
   border-style: solid;
   border-radius: 5px;
   color: white;
+}
+@media screen and (max-width: 1200px) {
+  .recomendacion__animepre__valoracion {
+    font-size: 12.5px;
+    border-radius: 4.1666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recomendacion__animepre__valoracion {
+    font-size: 9.375px;
+    border-radius: 3.125px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recomendacion__animepre__valoracion {
+    font-size: 7.5px;
+    border-radius: 2.5px;
+  }
 }
 
 .recom__texto {
