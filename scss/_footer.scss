@@ -1,0 +1,97 @@
+
+  $pieMarginTop:150px;
+  .piedepagina {
+
+    grid-area: footer;
+    background-color: $colorfondo2;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    border: 0px;
+    border-style: solid;
+    bottom: 0;
+    width: 100%;
+   
+  }
+  
+  
+  $piePaddingTexto:20px;
+  
+  .piedepagina__redes__iconos {
+    display: inline;
+    padding: $piePaddingTexto;
+
+    @include media-up(lg){
+      padding: calc($piePaddingTexto/1.2);
+    }
+    @include media-up(md){
+      
+      padding: calc($piePaddingTexto/1.5);
+      
+    }
+    @include media-up(sm){
+      
+      padding: calc($piePaddingTexto/1.8);
+    }
+  }
+  .piedepagina__redes__titulo {
+    padding: $piePaddingTexto;
+    color: $colorTextoRecom;
+
+    @include media-up(lg){
+      padding: calc($piePaddingTexto/1.2);
+    }
+    @include media-up(md){
+      
+      padding: calc($piePaddingTexto/1.5);
+      
+    }
+    @include media-up(sm){
+      
+      padding: calc($piePaddingTexto/1.8);
+    }
+  }
+  $pieTamañoIcono:50px;
+  
+  .piedepagina__redes__iconos__redes {
+    margin-left: 10px;
+    width: $pieTamañoIcono;
+    height:$pieTamañoIcono;
+    color: $colorTextoRecom;
+
+    @include media-up(lg){
+      padding: calc($piePaddingTexto/1.2);
+      width: calc($pieTamañoIcono/1.2);
+      height:calc($pieTamañoIcono/1.2);
+    }
+    @include media-up(md){
+      
+      padding: calc($piePaddingTexto/1.5);
+      width: calc($pieTamañoIcono/1.5);
+      height:calc($pieTamañoIcono/1.5);
+    }
+    @include media-up(sm){
+      
+      padding: calc($piePaddingTexto/1.8);
+      width: calc($pieTamañoIcono/1.8);
+      height:calc($pieTamañoIcono/1.8);
+    }
+  }
+  .piedepagina__agradecimiento {
+    color: $colorTextoRecom;
+    padding: $piePaddingTexto;
+
+    @include media-up(lg){
+      padding: calc($piePaddingTexto/1.2);
+    }
+    @include media-up(md){
+      
+      padding: calc($piePaddingTexto/1.5);
+      
+    }
+    @include media-up(sm){
+      
+      padding: calc($piePaddingTexto/1.8);
+    }
+  }

@@ -1,0 +1,281 @@
+
+  $presentacionMargin:10%;
+  $presentacionPadding:5%;
+  $presentacionBorderRadius:15px;
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: $presentacionMargin;
+    background-color: rgba(18, 86, 194, 0.727);
+  
+    border: 0px;
+    border-style: solid;
+    border-radius: $presentacionBorderRadius;
+    padding: $presentacionPadding;
+  
+
+    @include media-up(lg){
+      margin: calc($presentacionMargin/1.2);
+      border-radius: calc($presentacionBorderRadius/1.2);
+      padding: calc($presentacionPadding/1.2);
+    }
+    @include media-up(md){
+      margin: calc($presentacionMargin/1.5);
+      border-radius: calc($presentacionBorderRadius/1.5);
+      padding: calc($presentacionPadding/1.5);
+      
+    }
+    @include media-up(sm){
+      margin: calc($presentacionMargin/1.8);
+      border-radius: calc($presentacionBorderRadius/1.8);
+      padding: calc($presentacionPadding/1.8);
+    }
+
+  
+  
+  
+  }
+
+  $presentacionTPadding:10px;
+  $presentacionTBorderRadius:10px;
+  .presentacion__titulo {
+    background-color: $colorfondo3;
+    padding: $presentacionTPadding;
+  
+    border: 0px;
+    border-style: solid;
+    border-radius: $presentacionTBorderRadius;
+
+    @include media-up(lg){
+      padding: calc($presentacionTPadding/1.2);
+      border-radius: calc($presentacionTBorderRadius/1.2);
+    }
+    @include media-up(md){
+      padding: calc($presentacionTPadding/1.5);
+      border-radius: calc($presentacionTBorderRadius/1.5);
+      
+    }
+    @include media-up(sm){
+      padding: calc($presentacionTPadding/1.8);
+      border-radius: calc($presentacionTBorderRadius/1.8);
+    }
+
+  }
+  $presentacionDescripPadding:10px;
+  $presentacionDescripBorderRadius:10px;
+  .presentacion__descripcion {
+    background-color:$colorfondo3;
+    padding: $presentacionDescripPadding;
+  
+    border: 0px;
+    border-style: solid;
+    border-radius: $presentacionDescripBorderRadius;
+
+    @include media-up(lg){
+      padding: calc($presentacionDescripPadding/1.2);
+      border-radius: calc($presentacionDescripBorderRadius/1.2);
+    }
+    @include media-up(md){
+      padding: calc($presentacionDescripPadding/1.5);
+      border-radius: calc($presentacionDescripBorderRadius/1.5);
+      
+    }
+    @include media-up(sm){
+      padding: calc($presentacionDescripPadding/1.8);
+      border-radius: calc($presentacionDescripBorderRadius/1.8);
+    }
+
+  }
+  $formularioAncho:100%;
+  $formularioAlto: 500px;
+  $formularioMargenbot:100px;
+
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:$formularioAncho;
+    height:$formularioAlto;
+    margin-bottom: $formularioMargenbot;
+
+    @include media-up(lg){
+      width: calc($formularioAncho/1.2);
+    height: calc($formularioAlto/1.2);
+    margin-bottom: calc($formularioMargenbot/1.2);
+    }
+    @include media-up(md){
+      width: calc($formularioAncho/1.5);
+    height: calc($formularioAlto/1.5);
+    margin-bottom: calc($formularioMargenbot/1.5);
+      
+    }
+    @include media-up(sm){
+      width: calc($formularioAncho/1.8);
+    height: calc($formularioAlto/1.8);
+    margin-bottom: calc($formularioMargenbot/1.8);
+    }
+
+  }
+  
+  $formularioTBorderRadius:10px;
+  $formularioTPadding: 10px;
+  .formulario__titulo {
+    background-color: $colorfondo3;
+    padding: $formularioTPadding;
+    text-align: center;
+    border: 0px;
+    border-style: solid;
+    border-radius: $formularioTBorderRadius;
+
+    @include media-up(lg){
+      
+      padding: calc($formularioTPadding/1.2);
+      border-radius: calc($formularioTBorderRadius/1.2);
+    }
+    @include media-up(md){
+      padding: calc($formularioTPadding/1.5);
+      border-radius: calc($formularioTBorderRadius/1.5);
+      
+    }
+    @include media-up(sm){
+      padding: calc($formularioTPadding/1.8);
+      border-radius: calc($formularioTBorderRadius/1.8);
+    }
+
+  }
+  
+  $formularioDAlto:500px;
+  $formularioDAncho:500px;
+  $formularioDPaddign: 30px;
+  $formularioDBorderRadius:10px;
+  .formulario__datos {
+    background-color: rgba(18, 86, 194, 0.736);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    height: $formularioDAlto;
+    width: $formularioDAncho;
+    max-width: $formularioDAncho;
+    border: 0px;
+    border-style: solid;
+    border-radius: $formularioDBorderRadius;
+    border-color: $colorfondo3;
+    
+    @include media-up(lg){
+      height: calc($formularioDAlto/1.2);
+      width: calc($formularioDAncho/1.2);
+      max-width: calc($formularioDAncho/1.2);
+      border-radius: calc($formularioDBorderRadius/1.2);
+    }
+    @include media-up(md){
+      height: calc($formularioDAlto/1.5);
+      width: calc($formularioDAncho/1.5);
+      max-width: calc($formularioDAncho/1.5);
+      border-radius: calc($formularioDBorderRadius/1.5);
+      
+    }
+    @include media-up(sm){
+      height: calc($formularioDAlto/1.8);
+      width: calc($formularioDAncho/1.8);
+      max-width: calc($formularioDAncho/1.8);
+      border-radius: calc($formularioDBorderRadius/1.8);
+    }
+
+  }
+  
+  $formularioDCPaddgin:5px;
+  $formularioDCBorderRadius:10px;
+  .formulario__datos__cartel {
+    text-align: center;
+    background-color: $colorfondo1;
+    padding: $formularioDCPaddgin;
+    border: 0px;
+    border-style: solid;
+    border-radius: $formularioDCBorderRadius;
+    border-color: $colorfondo3;
+
+    @include media-up(lg){
+      padding: calc($formularioDCPaddgin/1.2);
+      border-radius: calc($formularioDCBorderRadius/1.2);
+    }
+    @include media-up(md){
+      padding: calc($formularioDCPaddgin/1.5);
+      border-radius: calc($formularioDCBorderRadius/1.5);
+      
+    }
+    @include media-up(sm){
+      padding: calc($formularioDCPaddgin/1.8);
+      border-radius: calc($formularioDCBorderRadius/1.8);
+    }
+
+  }
+  
+  $formularioLabelPadding:10px;
+  $formularioLabelBorderRadius:10px;
+  $formularioLabelAncho:400px;
+  $formularioLabelMargin:10px;
+  .form-label {
+    
+    background-color: rgb(189, 189, 189);
+    padding: $formularioLabelPadding;
+    width: $formularioLabelAncho;
+    border: 0px;
+    border-style: solid;
+    border-radius: $formularioLabelBorderRadius;
+    
+    @include media-up(lg){
+      margin: calc($formularioLabelMargin/1.2);
+      padding: calc($formularioLabelPadding/1.2);
+      width: calc($formularioLabelAncho/1.2);
+      border-radius: calc($formularioLabelBorderRadius/1.2);
+      
+    }
+    @include media-up(md){
+      margin: calc($formularioLabelMargin/1.5);
+      padding: calc($formularioLabelPadding/1.5);
+      width: calc($formularioLabelAncho/1.5);
+      border-radius: calc($formularioLabelBorderRadius/1.5);
+      
+      
+    }
+    @include media-up(sm){
+      margin: calc($formularioLabelMargin/1.8);
+      padding: calc($formularioLabelPadding/1.8);
+      width: calc($formularioLabelAncho/1.8);
+      border-radius: calc($formularioLabelBorderRadius/1.8);
+      
+    }
+
+  }
+  
+  .formulario__datos__cartel__input--input {
+    outline: none;
+  }
+  
+  $btnBotonMargin: 20px;
+  $btnBotonPadding: 10px;
+  .btn-success {
+    color: #fff;
+    background-color: $colorfondo1;
+    border-color: $colorfondo1;
+    margin: $btnBotonMargin;
+    padding: $btnBotonPadding;
+    
+    @include media-up(lg){
+      margin: calc($btnBotonMargin/1.2);
+    padding: calc($btnBotonPadding/1.2);
+    }
+    @include media-up(md){
+      margin: calc($btnBotonMargin/1.5);
+      padding: calc($btnBotonPadding/1.5);
+      
+    }
+    @include media-up(sm){
+      margin: calc($btnBotonMargin/1.8);
+      padding: calc($btnBotonPadding/1.8);
+    }
+
+  }

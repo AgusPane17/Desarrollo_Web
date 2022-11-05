@@ -8,13 +8,14 @@ body {
   margin: 0px;
   min-height: 100%;
   width: 100%;
-  /* position: relative; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  grid-template-areas: "header" "main" "footer";
 }
 
 header {
+  grid-area: header;
   background-image: url(https://i.pinimg.com/originals/fa/3a/6c/fa3a6cb112638bdda62973e635349fdc.png);
   background-repeat: no-repeat;
   background-position: 0px 30%;
@@ -32,6 +33,8 @@ header {
 
 main {
   margin-bottom: 200px;
+  grid-area: main;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -76,12 +79,10 @@ h2 {
   font-family: sans-serif;
 }
 
-a:link {
+a a:link {
   text-decoration: none;
 }
-
-a:visited {
-  /* Funciona para evitar que el link aparesca morado */
+a a:visited {
   text-decoration: none;
   color: black;
 }
@@ -90,12 +91,6 @@ ul {
   list-style: none;
 }
 
-/*CLASS*/
-/* .titular {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-} */
 .barra {
   background-color: rgb(18, 85, 194);
   /* height: 500px; */
@@ -255,19 +250,19 @@ ul {
 
 .contenedor {
   display: grid;
+  margin-bottom: auto;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 40px;
-  height: 1150px;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: "contenedor1 contenedor1" "contenedor2 contenedor3";
 }
 @media screen and (max-width: 1200px) {
   .contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
     grid-template-areas: "contenedor1 " "contenedor2" "contenedor3";
   }
 }
@@ -278,10 +273,12 @@ ul {
 
 .contenedor2 {
   grid-area: contenedor2;
+  margin-bottom: auto;
 }
 
 .contenedor3 {
   grid-area: contenedor3;
+  margin-bottom: auto;
 }
 
 .recomendacion {
@@ -546,7 +543,7 @@ ul {
 
 .recomendacion__animepre__valoracion {
   background-color: rgb(18, 85, 194);
-  font-size: 15px;
+  font-size: 17px;
   border: 0px;
   border-style: solid;
   border-radius: 5px;
@@ -554,19 +551,19 @@ ul {
 }
 @media screen and (max-width: 1200px) {
   .recomendacion__animepre__valoracion {
-    font-size: 12.5px;
+    font-size: 14.1666666667px;
     border-radius: 4.1666666667px;
   }
 }
 @media screen and (max-width: 768px) {
   .recomendacion__animepre__valoracion {
-    font-size: 9.375px;
+    font-size: 10.625px;
     border-radius: 3.125px;
   }
 }
 @media screen and (max-width: 576px) {
   .recomendacion__animepre__valoracion {
-    font-size: 7.5px;
+    font-size: 8.5px;
     border-radius: 2.5px;
   }
 }
@@ -595,6 +592,42 @@ ul {
   padding-left: 80px;
   padding-right: 80px;
 }
+@media screen and (max-width: 1200px) {
+  .recom__texto__titulo {
+    font-size: 16.6666666667px;
+    margin-left: 12.5%;
+    width: 191.6666666667px;
+    border-radius: 8.3333333333px;
+    padding-top: 4.1666666667px;
+    padding-bottom: 4.1666666667px;
+    padding-left: 66.6666666667px;
+    padding-right: 66.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recom__texto__titulo {
+    font-size: 13.3333333333px;
+    margin-left: 10%;
+    width: 153.3333333333px;
+    border-radius: 6.6666666667px;
+    padding-top: 3.3333333333px;
+    padding-bottom: 3.3333333333px;
+    padding-left: 53.3333333333px;
+    padding-right: 53.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recom__texto__titulo {
+    font-size: 11.7647058824px;
+    margin-left: 8.8235294118%;
+    width: 135.2941176471px;
+    border-radius: 5.8823529412px;
+    padding-top: 2.9411764706px;
+    padding-bottom: 2.9411764706px;
+    padding-left: 47.0588235294px;
+    padding-right: 47.0588235294px;
+  }
+}
 
 .recom__texto__descrip {
   margin: 30px;
@@ -605,51 +638,41 @@ ul {
   border-radius: 5px;
   border-color: rgb(206, 206, 207);
 }
+@media screen and (max-width: 1200px) {
+  .recom__texto__descrip {
+    border-radius: 4.1666666667px;
+    font-size: 16.6666666667px;
+    margin: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recom__texto__descrip {
+    border-radius: 3.3333333333px;
+    font-size: 13.3333333333px;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .recom__texto__descrip {
+    border-radius: 2.9411764706px;
+    font-size: 11.7647058824px;
+    margin: 17.6470588235px;
+  }
+}
 
 /* PAGINA: GENEROS PAGINAS */
-.generos {
-  display: flex;
-  flex-direction: column;
+a a:link {
+  text-decoration: none;
 }
-
-.generos__descrip {
-  width: 100%;
-}
-
-.generos__descrip__titulo {
-  width: 100%;
-  margin-left: 20%;
-  padding: 15px;
-  display: flex;
-  text-align: center;
-  max-width: 200px;
-  max-height: 200px;
-  background-color: rgb(18, 85, 194);
-  border: 0px;
-  border-style: solid;
-  border-radius: 45px;
-  border-color: rgb(206, 206, 207);
-  color: white;
-  font-family: "Source Serif Pro", serif, Arial, Helvetica, sans-serif;
-  font-size: 20px;
-}
-
-.generos__descrip__parrafo {
-  text-align: center;
-  background-color: rgb(189, 189, 189);
-  width: 40%;
-  margin-left: 20%;
-  font-size: 20px;
-  padding: 10px;
-  border: 0;
-  border-style: solid;
-  border-radius: 10px;
+a a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 /* PAGINA: GENEROS*/
 .genero_generos {
-  margin: 10px;
-  padding: 20px;
+  margin: 50px;
+  padding: 40px;
 }
 
 .genero_generos__titulogeneros {
@@ -668,6 +691,24 @@ ul {
   color: white;
   font-family: "Source Serif Pro", serif, Arial, Helvetica, sans-serif;
   font-size: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .genero_generos__titulogeneros {
+    border-radius: 37.5px;
+    font-size: 16.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .genero_generos__titulogeneros {
+    border-radius: 30px;
+    font-size: 13.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .genero_generos__titulogeneros {
+    border-radius: 25px;
+    font-size: 11.1111111111px;
+  }
 }
 
 .genero_generos__contenedor {
@@ -696,6 +737,33 @@ ul {
   border-radius: 25px;
   text-align: center;
 }
+@media screen and (max-width: 1200px) {
+  .genero_generos__contenedor__catalogo__genespecific {
+    width: 291.6666666667px;
+    height: 108.3333333333px;
+    margin: 16.6666666667px;
+    padding: 25px;
+    border-radius: 20.8333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .genero_generos__contenedor__catalogo__genespecific {
+    width: 233.3333333333px;
+    height: 86.6666666667px;
+    margin: 13.3333333333px;
+    padding: 20px;
+    border-radius: 16.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .genero_generos__contenedor__catalogo__genespecific {
+    width: 194.4444444444px;
+    height: 72.2222222222px;
+    margin: 11.1111111111px;
+    padding: 16.6666666667px;
+    border-radius: 13.8888888889px;
+  }
+}
 
 #genero_generos__contenedor__catalogo__genespecific--accion {
   background-image: url(/imagenes/generoAccion-min.jpg);
@@ -720,6 +788,99 @@ ul {
   border-color: rgba(18, 86, 194, 0.592);
   border-radius: 15px;
 }
+@media screen and (max-width: 1200px) {
+  .genero_generos__contenedor__catalogo__genespecific__Nombre {
+    font-size: 33.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .genero_generos__contenedor__catalogo__genespecific__Nombre {
+    font-size: 26.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .genero_generos__contenedor__catalogo__genespecific__Nombre {
+    font-size: 22.2222222222px;
+  }
+}
+
+.generos {
+  display: flex;
+  flex-direction: column;
+}
+
+.generos__descrip {
+  width: 100%;
+}
+
+.generos__descrip__titulo {
+  width: 100%;
+  margin-left: 20%;
+  padding: 15px;
+  display: flex;
+  text-align: center;
+  max-width: 200px;
+  max-height: 200px;
+  background-color: rgb(18, 85, 194);
+  border: 0px;
+  border-style: solid;
+  border-radius: 45px;
+  border-color: rgb(206, 206, 207);
+  color: white;
+  font-family: "Source Serif Pro", serif, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .generos__descrip__titulo {
+    padding: 12.5px;
+    border-radius: 37.5px;
+    font-size: 33.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .generos__descrip__titulo {
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 26.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .generos__descrip__titulo {
+    padding: 8.3333333333px;
+    border-radius: 25px;
+    font-size: 22.2222222222px;
+  }
+}
+
+.generos__descrip__parrafo {
+  text-align: center;
+  background-color: rgb(189, 189, 189);
+  width: 40%;
+  margin-left: 20%;
+  font-size: 40px;
+  padding: 10px;
+  border: 0;
+  border-style: solid;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .generos__descrip__parrafo {
+    padding: 8.3333333333px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .generos__descrip__parrafo {
+    padding: 6.6666666667px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .generos__descrip__parrafo {
+    padding: 5.5555555556px;
+    border-radius: 5.5555555556px;
+  }
+}
 
 /* PAGINA: QUIENSOY*/
 .presentacion {
@@ -733,6 +894,27 @@ ul {
   border-radius: 15px;
   padding: 5%;
 }
+@media screen and (max-width: 1200px) {
+  .presentacion {
+    margin: 8.3333333333%;
+    border-radius: 12.5px;
+    padding: 4.1666666667%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .presentacion {
+    margin: 6.6666666667%;
+    border-radius: 10px;
+    padding: 3.3333333333%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .presentacion {
+    margin: 5.5555555556%;
+    border-radius: 8.3333333333px;
+    padding: 2.7777777778%;
+  }
+}
 
 .presentacion__titulo {
   background-color: rgb(189, 189, 189);
@@ -740,6 +922,24 @@ ul {
   border: 0px;
   border-style: solid;
   border-radius: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .presentacion__titulo {
+    padding: 8.3333333333px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .presentacion__titulo {
+    padding: 6.6666666667px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .presentacion__titulo {
+    padding: 5.5555555556px;
+    border-radius: 5.5555555556px;
+  }
 }
 
 .presentacion__descripcion {
@@ -749,6 +949,24 @@ ul {
   border-style: solid;
   border-radius: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .presentacion__descripcion {
+    padding: 8.3333333333px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .presentacion__descripcion {
+    padding: 6.6666666667px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .presentacion__descripcion {
+    padding: 5.5555555556px;
+    border-radius: 5.5555555556px;
+  }
+}
 
 .formulario {
   display: flex;
@@ -756,6 +974,28 @@ ul {
   align-items: center;
   width: 100%;
   height: 500px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .formulario {
+    width: 83.3333333333%;
+    height: 416.6666666667px;
+    margin-bottom: 83.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .formulario {
+    width: 66.6666666667%;
+    height: 333.3333333333px;
+    margin-bottom: 66.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .formulario {
+    width: 55.5555555556%;
+    height: 277.7777777778px;
+    margin-bottom: 55.5555555556px;
+  }
 }
 
 .formulario__titulo {
@@ -765,6 +1005,24 @@ ul {
   border: 0px;
   border-style: solid;
   border-radius: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .formulario__titulo {
+    padding: 8.3333333333px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .formulario__titulo {
+    padding: 6.6666666667px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .formulario__titulo {
+    padding: 5.5555555556px;
+    border-radius: 5.5555555556px;
+  }
 }
 
 .formulario__datos {
@@ -781,6 +1039,30 @@ ul {
   border-radius: 10px;
   border-color: rgb(189, 189, 189);
 }
+@media screen and (max-width: 1200px) {
+  .formulario__datos {
+    height: 416.6666666667px;
+    width: 416.6666666667px;
+    max-width: 416.6666666667px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .formulario__datos {
+    height: 333.3333333333px;
+    width: 333.3333333333px;
+    max-width: 333.3333333333px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .formulario__datos {
+    height: 277.7777777778px;
+    width: 277.7777777778px;
+    max-width: 277.7777777778px;
+    border-radius: 5.5555555556px;
+  }
+}
 
 .formulario__datos__cartel {
   text-align: center;
@@ -791,15 +1073,56 @@ ul {
   border-radius: 10px;
   border-color: rgb(189, 189, 189);
 }
+@media screen and (max-width: 1200px) {
+  .formulario__datos__cartel {
+    padding: 4.1666666667px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .formulario__datos__cartel {
+    padding: 3.3333333333px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .formulario__datos__cartel {
+    padding: 2.7777777778px;
+    border-radius: 5.5555555556px;
+  }
+}
 
 .form-label {
-  margin: 10px;
   background-color: rgb(189, 189, 189);
   padding: 10px;
   width: 400px;
   border: 0px;
   border-style: solid;
   border-radius: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .form-label {
+    margin: 8.3333333333px;
+    padding: 8.3333333333px;
+    width: 333.3333333333px;
+    border-radius: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-label {
+    margin: 6.6666666667px;
+    padding: 6.6666666667px;
+    width: 266.6666666667px;
+    border-radius: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .form-label {
+    margin: 5.5555555556px;
+    padding: 5.5555555556px;
+    width: 222.2222222222px;
+    border-radius: 5.5555555556px;
+  }
 }
 
 .formulario__datos__cartel__input--input {
@@ -813,31 +1136,76 @@ ul {
   margin: 20px;
   padding: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .btn-success {
+    margin: 16.6666666667px;
+    padding: 8.3333333333px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-success {
+    margin: 13.3333333333px;
+    padding: 6.6666666667px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .btn-success {
+    margin: 11.1111111111px;
+    padding: 5.5555555556px;
+  }
+}
 
-/* PAGINA: QUIENSOY*/
 /* PIE DE PAGINA */
 .piedepagina {
+  grid-area: footer;
   background-color: rgb(18, 85, 194);
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
   align-items: flex-start;
   border: 0px;
   border-style: solid;
-  margin-top: auto;
-  width: 100%;
   bottom: 0;
-  margin-bottom: 0;
+  width: 100%;
 }
 
 .piedepagina__redes__iconos {
   display: inline;
   padding: 20px;
 }
+@media screen and (max-width: 1200px) {
+  .piedepagina__redes__iconos {
+    padding: 16.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .piedepagina__redes__iconos {
+    padding: 13.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .piedepagina__redes__iconos {
+    padding: 11.1111111111px;
+  }
+}
 
 .piedepagina__redes__titulo {
   padding: 20px;
   color: white;
+}
+@media screen and (max-width: 1200px) {
+  .piedepagina__redes__titulo {
+    padding: 16.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .piedepagina__redes__titulo {
+    padding: 13.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .piedepagina__redes__titulo {
+    padding: 11.1111111111px;
+  }
 }
 
 .piedepagina__redes__iconos__redes {
@@ -846,10 +1214,46 @@ ul {
   height: 50px;
   color: white;
 }
+@media screen and (max-width: 1200px) {
+  .piedepagina__redes__iconos__redes {
+    padding: 16.6666666667px;
+    width: 41.6666666667px;
+    height: 41.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .piedepagina__redes__iconos__redes {
+    padding: 13.3333333333px;
+    width: 33.3333333333px;
+    height: 33.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .piedepagina__redes__iconos__redes {
+    padding: 11.1111111111px;
+    width: 27.7777777778px;
+    height: 27.7777777778px;
+  }
+}
 
 .piedepagina__agradecimiento {
   color: white;
   padding: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .piedepagina__agradecimiento {
+    padding: 16.6666666667px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .piedepagina__agradecimiento {
+    padding: 13.3333333333px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .piedepagina__agradecimiento {
+    padding: 11.1111111111px;
+  }
 }
 
 /*# sourceMappingURL=turefotaku.css.map */

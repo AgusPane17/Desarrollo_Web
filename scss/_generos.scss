@@ -1,0 +1,234 @@
+    a{
+        a:link {
+        text-decoration: none;
+        }
+        a:visited {
+
+        text-decoration: none;
+        color: black;
+        }
+    }
+  /* PAGINA: GENEROS*/
+  
+
+
+  
+  .genero_generos {
+    margin: 50px;
+    padding: 40px;
+  }
+
+  $generosTBorderRadius: 45px;
+  $generosTTamañoLetra: 20px;
+  
+  .genero_generos__titulogeneros {
+    /* transform: translate(-50%,-50%);
+      margin-left: 50%; */
+    /* position: absolute; z-index:1; */
+  
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: rgb(8, 8, 126);
+    border: 2px;
+    border-style: solid;
+    border-radius: $generosTBorderRadius;
+    border-color: rgb(206, 206, 207);
+    color: $colorTextoRecom;
+    font-family: "Source Serif Pro", serif, Arial, Helvetica, sans-serif;
+    font-size:  $generosTTamañoLetra;
+  
+
+    
+    @include media-up(lg){
+      border-radius: calc($generosTBorderRadius/1.2);
+      font-size:  calc($generosTTamañoLetra/1.2);
+    }
+    @include media-up(md){
+      border-radius: calc($generosTBorderRadius/1.5);
+      font-size:  calc($generosTTamañoLetra/1.5);
+      
+    }
+    @include media-up(sm){
+      border-radius: calc($generosTBorderRadius/1.8);
+      font-size:  calc($generosTTamañoLetra/1.8);
+    }
+  }
+  .genero_generos__contenedor {
+    display: flex;
+    justify-content: center;
+  }
+  .genero_generos__contenedor__catalogo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 200px;
+  }
+  
+    $generosCCGAncho:350px;
+    $generosCCGAlto:130px;
+    $generosCCGMargin:20px;
+    $generosCCGPadding:30px;
+    $generosCCGBorderRadius:25px;
+  .genero_generos__contenedor__catalogo__genespecific {
+    
+    
+    width: $generosCCGAncho;
+    height: $generosCCGAlto;
+  
+    margin:  $generosCCGMargin;
+    display: flex;
+    flex-direction: column;
+    padding: $generosCCGPadding;
+  
+    align-content: center;
+    border: 2px;
+    border-style: solid;
+  
+    border-color: rgba(18, 86, 194, 0.592);
+    border-radius: $generosCCGBorderRadius;
+  
+    text-align: center;
+
+    @include media-up(lg){
+      width: calc($generosCCGAncho/1.2);
+      height: calc($generosCCGAlto/1.2);
+      margin:  calc($generosCCGMargin/1.2);
+      padding: calc($generosCCGPadding/1.2);
+      border-radius: calc($generosCCGBorderRadius/1.2);
+    }
+    @include media-up(md){
+      width: calc($generosCCGAncho/1.5);
+      height: calc($generosCCGAlto/1.5);
+      margin:  calc($generosCCGMargin/1.5);
+      padding: calc($generosCCGPadding/1.5);
+      border-radius: calc($generosCCGBorderRadius/1.5);
+    }
+    @include media-up(sm){
+      width: calc($generosCCGAncho/1.8);
+      height: calc($generosCCGAlto/1.8);
+      margin:  calc($generosCCGMargin/1.8);
+      padding: calc($generosCCGPadding/1.8);
+      border-radius: calc($generosCCGBorderRadius/1.8);
+    }
+  }
+
+  #genero_generos__contenedor__catalogo__genespecific--accion {
+    background-image: url(/imagenes/generoAccion-min.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  #genero_generos__contenedor__catalogo__genespecific--romance {
+    background-image: url(/imagenes/animeRomance-min.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+    
+  $generosCCGTTamañoTexto:40px;
+  .genero_generos__contenedor__catalogo__genespecific__Nombre {
+    font-size: $generosCCGTTamañoTexto;
+    text-align: center;
+    /* padding: 10px; */
+  
+    background-color: rgba(18, 86, 194, 0.752);
+  
+    color: white;
+    border: 0px;
+    border-style: solid;
+    border-color: rgba(18, 86, 194, 0.592);
+    border-radius: 15px;
+
+    
+    @include media-up(lg){
+      font-size: calc($generosCCGTTamañoTexto/1.2);
+    }
+    @include media-up(md){
+      font-size: calc($generosCCGTTamañoTexto/1.5);
+    }
+    @include media-up(sm){
+      font-size: calc($generosCCGTTamañoTexto/1.8);
+    }
+  }
+
+  // Paginas de generos
+  .generos {
+    display: flex;
+    flex-direction: column;
+  }
+  .generos__descrip {
+    width: 100%;
+  }
+
+
+  $generosDescripcionPadding:15px;
+  $generosDescripcionBorderRadius:45px;
+  $generosDescripcionTamañoTexto:40px;
+  .generos__descrip__titulo {
+    width: 100%;
+    margin-left: 20%;
+    padding: $generosDescripcionPadding;
+    display: flex;
+    text-align: center;
+    max-width: 200px;
+    max-height: 200px;
+  
+    background-color: rgb(18, 85, 194);
+    border: 0px;
+    border-style: solid;
+    border-radius: $generosDescripcionBorderRadius;
+    border-color: rgb(206, 206, 207);
+    color: $colorTextoRecom;
+  
+    font-family: "Source Serif Pro", serif, Arial, Helvetica, sans-serif;
+    font-size: $generosDescripcionTamañoTexto;
+
+    @include media-up(lg){
+        padding: calc($generosDescripcionPadding/1.2);
+        border-radius: calc($generosDescripcionBorderRadius/1.2);
+        font-size: calc($generosDescripcionTamañoTexto/1.2);
+      }
+      @include media-up(md){
+        padding: calc($generosDescripcionPadding/1.5);
+        border-radius: calc($generosDescripcionBorderRadius/1.5);
+        font-size: calc($generosDescripcionTamañoTexto/1.5);
+        
+      }
+      @include media-up(sm){
+        padding: calc($generosDescripcionPadding/1.8);
+        border-radius: calc($generosDescripcionBorderRadius/1.8);
+        font-size: calc($generosDescripcionTamañoTexto/1.8);
+  }
+}
+
+
+  $generosDescripcionPPadding:10px;
+  $generosDescripcionPBorderRadius:10px;
+  .generos__descrip__parrafo {
+    text-align: center;
+    background-color: $colorfondo3;
+    width: 40%;
+    margin-left: 20%;
+    font-size: $generosDescripcionTamañoTexto;
+    padding: $generosDescripcionPPadding;
+  
+    border: 0;
+    border-style: solid;
+    border-radius: $generosDescripcionPBorderRadius;
+
+    @include media-up(lg){
+        padding: calc($generosDescripcionPPadding/1.2);
+        border-radius: calc($generosDescripcionPBorderRadius/1.2);
+
+      }
+      @include media-up(md){
+        padding: calc($generosDescripcionPPadding/1.5);
+        border-radius: calc($generosDescripcionPBorderRadius/1.5);
+        
+      }
+      @include media-up(sm){
+        padding: calc($generosDescripcionPPadding/1.8);
+        border-radius: calc($generosDescripcionPBorderRadius/1.8);
+  }
+}
