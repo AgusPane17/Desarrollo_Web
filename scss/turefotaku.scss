@@ -166,7 +166,7 @@
     
 
   }
-  $tamaño_letra_boton: 40px;
+  $tamaño_letra_boton: 30px;
   $padding_x_boton: 15px;
   $padding_y_boton: 10px;
   
@@ -194,9 +194,7 @@
     transition: 0.8s;
     object-fit: cover;
 
-            .button:hover {
-            transform: scale(1.2);
-            }
+            
             
             @include media-up(lg){
               
@@ -213,6 +211,9 @@
               font-size: calc($tamaño_letra_boton/2.2);
             }
   }
+  .button:hover {
+    transform: scale(1.2);
+    }
   
   
   $trailers_margentop:10px;
@@ -275,9 +276,8 @@
       }
   }
 
-  $tamañoVideo_x:560px;
-  
-  $tamañoVideo_y:315px;
+  $tamañoVideo_x:460px;
+  $tamañoVideo_y:270px;
 
 
   .trailer__galeri__video {
@@ -286,6 +286,7 @@
     height: $tamañoVideo_y;
 
             @include media-up(lg){
+                    
                     .video1{
                       grid-area: video1;
                             width: calc($tamañoVideo_x/2);

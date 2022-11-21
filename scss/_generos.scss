@@ -1,8 +1,8 @@
-    a{
-        a:link {
+    p{
+        p:link {
         text-decoration: none;
         }
-        a:visited {
+        p:visited {
 
         text-decoration: none;
         color: black;
@@ -123,6 +123,7 @@
     background-image: url(/imagenes/animeRomance-min.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    
   }
 
     
@@ -206,6 +207,8 @@
   $generosDescripcionPPadding:10px;
   $generosDescripcionPBorderRadius:10px;
   .generos__descrip__parrafo {
+
+
     text-align: center;
     background-color: $colorfondo3;
     width: 40%;
@@ -218,16 +221,19 @@
     border-radius: $generosDescripcionPBorderRadius;
 
     @include media-up(lg){
+      font-size: calc($generosDescripcionTamañoTexto/1.2);
         padding: calc($generosDescripcionPPadding/1.2);
         border-radius: calc($generosDescripcionPBorderRadius/1.2);
 
       }
       @include media-up(md){
+        font-size: calc($generosDescripcionTamañoTexto/1.5);
         padding: calc($generosDescripcionPPadding/1.5);
         border-radius: calc($generosDescripcionPBorderRadius/1.5);
         
       }
       @include media-up(sm){
+        font-size: calc($generosDescripcionTamañoTexto/1.8);
         padding: calc($generosDescripcionPPadding/1.8);
         border-radius: calc($generosDescripcionPBorderRadius/1.8);
   }

@@ -129,7 +129,7 @@ ul {
   width: 100%;
   max-width: auto;
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
@@ -145,23 +145,24 @@ ul {
   transition: 0.8s;
   object-fit: cover;
 }
-.button .button:hover {
-  transform: scale(1.2);
-}
 @media screen and (max-width: 1200px) {
   .button {
-    font-size: 28.5714285714px;
+    font-size: 21.4285714286px;
   }
 }
 @media screen and (max-width: 768px) {
   .button {
-    font-size: 23.5294117647px;
+    font-size: 17.6470588235px;
   }
 }
 @media screen and (max-width: 576px) {
   .button {
-    font-size: 18.1818181818px;
+    font-size: 13.6363636364px;
   }
+}
+
+.button:hover {
+  transform: scale(1.2);
 }
 
 .trailer {
@@ -214,19 +215,19 @@ ul {
 
 .trailer__galeri__video {
   padding: 15px;
-  width: 560px;
-  height: 315px;
+  width: 460px;
+  height: 270px;
 }
 @media screen and (max-width: 1200px) {
   .trailer__galeri__video .video1 {
     grid-area: video1;
-    width: 280px;
-    height: 157.5px;
+    width: 230px;
+    height: 135px;
   }
   .trailer__galeri__video .video2 {
     grid-area: video2;
-    width: 280px;
-    height: 157.5px;
+    width: 230px;
+    height: 135px;
   }
 }
 
@@ -661,10 +662,10 @@ ul {
 }
 
 /* PAGINA: GENEROS PAGINAS */
-a a:link {
+p p:link {
   text-decoration: none;
 }
-a a:visited {
+p p:visited {
   text-decoration: none;
   color: black;
 }
@@ -865,18 +866,21 @@ a a:visited {
 }
 @media screen and (max-width: 1200px) {
   .generos__descrip__parrafo {
+    font-size: 33.3333333333px;
     padding: 8.3333333333px;
     border-radius: 8.3333333333px;
   }
 }
 @media screen and (max-width: 768px) {
   .generos__descrip__parrafo {
+    font-size: 26.6666666667px;
     padding: 6.6666666667px;
     border-radius: 6.6666666667px;
   }
 }
 @media screen and (max-width: 576px) {
   .generos__descrip__parrafo {
+    font-size: 22.2222222222px;
     padding: 5.5555555556px;
     border-radius: 5.5555555556px;
   }
